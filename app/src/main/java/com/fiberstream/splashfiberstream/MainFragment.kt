@@ -12,6 +12,12 @@ class MainFragment : androidx.leanback.app.ErrorFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         title = "Selamat datang"
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         utils = Utils()
         val installedPackages: List<String>? = utils.getInstalledAppsPackageNameList(activity)
         if (installedPackages != null) {
@@ -31,7 +37,6 @@ class MainFragment : androidx.leanback.app.ErrorFragment() {
                 },3000)
             }
         }
-
     }
 
     internal fun setErrorContent() {

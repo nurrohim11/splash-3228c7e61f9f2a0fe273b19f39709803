@@ -13,9 +13,6 @@ class MainFragment : androidx.leanback.app.ErrorFragment() {
         super.onCreate(savedInstanceState)
         title = "Selamat datang"
         utils = Utils()
-        val launchIntent = activity.packageManager
-            .getLaunchIntentForPackage("com.fiberstream.tv")
-        activity.startActivity(launchIntent)
         val installedPackages: List<String>? = utils.getInstalledAppsPackageNameList(activity)
         if (installedPackages != null) {
             if (installedPackages.contains("com.fiberstream.tv")){

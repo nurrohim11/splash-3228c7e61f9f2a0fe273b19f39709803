@@ -25,7 +25,7 @@ class MainFragment : androidx.leanback.app.ErrorFragment() {
                 Handler().postDelayed({
                     val launchIntent = activity.packageManager.getLaunchIntentForPackage("com.fiberstream.tv")
                     activity.startActivity(launchIntent)
-                }, 200)
+                }, 800)
             }else{
                 Handler().postDelayed({
                     activity.startActivity(
